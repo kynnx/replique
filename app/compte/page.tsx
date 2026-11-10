@@ -88,14 +88,16 @@ async function Contenu({
             Écrivez les questions que vos clients vous posent le plus souvent,
             une par ligne. Si vous l’avez, ajoutez la réponse que vous donnez
             d’habitude. Nous préparons votre base de réponses sous 3 jours
-            ouvrés.
+            ouvrés et nous vous l’envoyons par e-mail, dans un document
+            partagé que vous pourrez modifier.
           </p>
 
           {envoi === "ok" && (
             <p className="mt-6 rounded-md border border-sapin px-4 py-3 text-sapin">
-              Merci, vos questions sont bien reçues. Votre base de réponses sera
-              prête sous 3 jours ouvrés. Vous pouvez en ajouter d’autres à tout
-              moment.
+              Merci, vos questions sont bien reçues. Vous recevrez votre base de
+              réponses par e-mail sous 3 jours ouvrés, dans un document partagé
+              que vous pourrez modifier. Vous pouvez ajouter d’autres questions
+              à tout moment.
             </p>
           )}
           {envoi === "erreur" && (

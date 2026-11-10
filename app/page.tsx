@@ -100,8 +100,9 @@ export default function Home() {
                 2. Nous préparons votre base de réponses
               </p>
               <p className="mt-1 text-lg leading-snug">
-                Nous rédigeons et organisons vos réponses avec vous, sous 3 jours
-                ouvrés.
+                Nous rédigeons et organisons vos réponses sous 3 jours ouvrés,
+                puis nous vous les envoyons par e-mail dans un document partagé
+                que vous pouvez modifier.
               </p>
             </li>
             <li className="py-6">
@@ -109,8 +110,8 @@ export default function Home() {
                 3. Vous répondez en quelques secondes
               </p>
               <p className="mt-1 text-lg leading-snug">
-                Dès qu’une question arrive, vous retrouvez la bonne réponse, vous
-                la relisez, vous l’envoyez.
+                Dès qu’une question arrive, vous retrouvez la bonne réponse dans
+                votre document, vous la copiez, vous l’adaptez, vous l’envoyez.
               </p>
             </li>
           </ol>
@@ -123,10 +124,10 @@ export default function Home() {
             </h2>
             <p className="mt-4 text-lg leading-snug">
               Réplique est un service jeune. Aujourd’hui, vous recevez votre base
-              de réponses préparée avec vous. D’autres fonctions sont en
-              préparation : repérage des nouvelles questions, réponse proposée
-              en un clic, suivi du temps gagné. Elles seront incluses dans votre
-              abonnement.
+              de réponses préparée avec vous, dans un document partagé. D’autres
+              fonctions sont en préparation : repérage des nouvelles questions,
+              réponse proposée en un clic, suivi du temps gagné. Elles seront
+              incluses dans votre abonnement.
             </p>
           </div>
         </section>
