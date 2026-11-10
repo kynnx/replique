@@ -16,11 +16,12 @@ export default function Home() {
 
         <section className="mx-auto max-w-3xl px-5 pb-14 pt-6">
           <h1 className="font-titre text-4xl font-extrabold leading-[1.05] text-sapin sm:text-6xl">
-            Répondez à vos clients en un clic.
+            Répondez à vos clients en quelques secondes.
           </h1>
           <p className="mt-5 text-lg leading-snug sm:text-xl">
-            Les mêmes questions reviennent chaque jour. Réplique les reconnaît et
-            vous propose la bonne réponse, prête à envoyer.
+            Les mêmes questions reviennent chaque jour. Nous préparons avec vous
+            les bonnes réponses, une fois pour toutes : il ne vous reste qu’à
+            les envoyer.
           </p>
           <Link
             href="/connexion"
@@ -32,7 +33,8 @@ export default function Home() {
             79 € par mois · sans engagement · satisfait ou remboursé pendant 30 jours
           </p>
         </section>
-               <section className="mx-auto max-w-3xl px-5 pb-12">
+
+        <section className="mx-auto max-w-3xl px-5 pb-12">
           <p className="text-sm font-bold uppercase tracking-widest text-brique">
             Un exemple concret
           </p>
@@ -45,7 +47,7 @@ export default function Home() {
             </p>
             <hr className="my-5 border-encre/20" />
             <p className="text-sm font-bold uppercase tracking-widest text-sapin">
-              Réplique propose · Suivi de commande
+              Réponse prête dans votre base · Suivi de commande
             </p>
             <p className="mt-2 rounded-md bg-creme px-4 py-3 text-lg leading-snug">
               Bonjour, merci de votre patience. Votre commande est en cours
@@ -53,14 +55,9 @@ export default function Home() {
               numéro. Si rien n’est arrivé d’ici 3 jours, répondez à ce message
               et nous la traitons en priorité. Bonne journée.
             </p>
-            <div className="mt-4 flex gap-3" aria-hidden="true">
-              <span className="rounded-md border border-sapin px-5 py-3 font-bold text-sapin">
-                Modifier
-              </span>
-              <span className="rounded-md bg-sapin px-5 py-3 font-bold text-white">
-                Envoyer
-              </span>
-            </div>
+            <p className="mt-4 text-base">
+              Vous la relisez, vous l’adaptez si besoin, vous l’envoyez.
+            </p>
           </div>
           <p className="mt-3 text-sm">
             Exemple pour illustrer : le client et son message sont inventés.
@@ -85,34 +82,35 @@ export default function Home() {
 
         <section className="mx-auto max-w-3xl px-5 py-12">
           <h2 className="font-titre text-3xl font-extrabold text-sapin sm:text-4xl">
-            Trois choses, pas une de plus.
+            Comment ça marche.
           </h2>
           <ol className="mt-8 divide-y divide-encre/20 border-y border-encre/20">
             <li className="py-6">
               <p className="font-titre text-xl font-extrabold">
-                1. Votre base en dix minutes
+                1. Vous nous envoyez vos questions
               </p>
               <p className="mt-1 text-lg leading-snug">
-                Vous saisissez vos questions fréquentes une fois, avec la réponse
-                que vous donnez d’habitude.
+                Vous écrivez les questions que vos clients vous posent le plus
+                souvent, avec la réponse que vous donnez d’habitude. Dix minutes
+                suffisent.
               </p>
             </li>
             <li className="py-6">
               <p className="font-titre text-xl font-extrabold">
-                2. Une réponse en un clic
+                2. Nous préparons votre base de réponses
               </p>
               <p className="mt-1 text-lg leading-snug">
-                Elle est proposée dès qu’une question arrive. Vous la relisez, vous
-                la modifiez si besoin, puis vous l’envoyez.
+                Nous rédigeons et organisons vos réponses avec vous, sous 3 jours
+                ouvrés.
               </p>
             </li>
             <li className="py-6">
               <p className="font-titre text-xl font-extrabold">
-                3. Le temps gagné, chiffré
+                3. Vous répondez en quelques secondes
               </p>
               <p className="mt-1 text-lg leading-snug">
-                Les questions nouvelles sont repérées pour être ajoutées à la base,
-                et vous voyez chaque semaine combien d’heures vous avez récupérées.
+                Dès qu’une question arrive, vous retrouvez la bonne réponse, vous
+                la relisez, vous l’envoyez.
               </p>
             </li>
           </ol>
@@ -121,13 +119,14 @@ export default function Home() {
         <section className="border-y border-encre/20 bg-white/40">
           <div className="mx-auto max-w-3xl px-5 py-12">
             <h2 className="font-titre text-3xl font-extrabold text-sapin">
-              Ce que vous recevez au départ
+              Un service qui démarre
             </h2>
             <p className="mt-4 text-lg leading-snug">
-              Après votre inscription, nous remplissons ensemble votre base de
-              questions fréquentes, sous quelques jours. Le service s’enrichit
-              ensuite régulièrement : votre abonnement donne accès à chaque
-              nouveauté.
+              Réplique est un service jeune. Aujourd’hui, vous recevez votre base
+              de réponses préparée avec vous. D’autres fonctions sont en
+              préparation : repérage des nouvelles questions, réponse proposée
+              en un clic, suivi du temps gagné. Elles seront incluses dans votre
+              abonnement.
             </p>
           </div>
         </section>
