@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import { connection } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import Pied from "@/components/pied";
+import { envoyerQuestions } from "./actions";
 
 export const metadata: Metadata = {
   title: "Mon compte · Réplique",
@@ -13,10 +14,10 @@ export const metadata: Metadata = {
 async function Contenu({
   searchParams,
 }: {
-  searchParams: Promise<{ paiement?: string }>;
+  searchParams: Promise<{ paiement?: string; envoi?: string }>;
 }) {
   await connection();
-  const { paiement } = await searchParams;
+  const { paiement, envoi } = await searchParams;
 
   const supabase = await createClient();
   const {
@@ -74,6 +75,59 @@ async function Contenu({
           </button>
         </form>
       )}
+
+      {actif && (
+        <section className="mt-8">
+          <p className="text-sm font-bold uppercase tracking-widest text-brique">
+            Prochaine étape
+          </p>
+          <h2 className="mt-2 font-titre text-2xl font-extrabold text-sapin">
+            Envoyez-nous vos questions
+          </h2>
+          <p className="mt-3 text-lg leading-snug">
+            Écrivez les questions que vos clients vous posent le plus souvent,
+            une par ligne. Si vous l’avez, ajoutez la réponse que vous donnez
+            d’habitude. Nous préparons votre base de réponses sous 3 jours
+            ouvrés.
+          </p>
+
+          {envoi === "ok" && (
+            <p className="mt-6 rounded-md border border-sapin px-4 py-3 text-sapin">
+              Merci, vos questions sont bien reçues. Votre base de réponses sera
+              prête sous 3 jours ouvrés. Vous pouvez en ajouter d’autres à tout
+              moment.
+            </p>
+          )}
+          {envoi === "erreur" && (
+            <p className="mt-6 rounded-md border border-brique px-4 py-3 text-brique">
+              Vos questions n’ont pas pu être envoyées. Vérifiez que le texte
+              n’est pas vide et qu’il fait moins de 5 000 caractères, puis
+              réessayez.
+            </p>
+          )}
+
+          <form action={envoyerQuestions} className="mt-6">
+            <label htmlFor="contenu" className="block text-sm font-bold">
+              Vos questions fréquentes
+            </label>
+            <textarea
+              id="contenu"
+              name="contenu"
+              required
+              maxLength={5000}
+              rows={10}
+              placeholder="Où est ma commande ?&#10;Puis-je échanger un article ?&#10;Livrez-vous en Belgique ?"
+              className="mt-2 block w-full rounded-md border border-encre/40 bg-white px-4 py-3 text-base"
+            />
+            <button
+              type="submit"
+              className="mt-4 block w-full rounded-md bg-brique px-6 py-4 text-center text-lg font-bold text-white"
+            >
+              Envoyer mes questions
+            </button>
+          </form>
+        </section>
+      )}
     </>
   );
 }
@@ -81,23 +135,23 @@ async function Contenu({
 export default function Compte({
   searchParams,
 }: {
-  searchParams: Promise<{ paiement?: string }>;
+  searchParams: Promise<{ paiement?: string; envoi?: string }>;
 }) {
   return (
     <>
-    <main className="min-h-screen">
-      <header className="mx-auto max-w-xl px-5 py-5">
-        <Link href="/" className="font-titre text-xl font-extrabold text-sapin">
-          Réplique
-        </Link>
-      </header>
-      <section className="mx-auto max-w-xl px-5 pb-16 pt-6">
-        <Suspense fallback={<p className="text-lg">Chargement…</p>}>
-          <Contenu searchParams={searchParams} />
-        </Suspense>
-      </section>
-    </main>
-    <Pied />
+      <main className="min-h-screen">
+        <header className="mx-auto max-w-xl px-5 py-5">
+          <Link href="/" className="font-titre text-xl font-extrabold text-sapin">
+            Réplique
+          </Link>
+        </header>
+        <section className="mx-auto max-w-xl px-5 pb-16 pt-6">
+          <Suspense fallback={<p className="text-lg">Chargement…</p>}>
+            <Contenu searchParams={searchParams} />
+          </Suspense>
+        </section>
+      </main>
+      <Pied />
     </>
   );
 }
