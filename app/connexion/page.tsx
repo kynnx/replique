@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Formulaire from "./formulaire";
+import Pied from "@/components/pied";
 
 export const metadata: Metadata = {
   title: "Connexion · Réplique",
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
 
 export default function Connexion() {
   return (
+    <>
     <main className="min-h-screen">
       <header className="mx-auto max-w-xl px-5 py-5">
         <Link href="/" className="font-titre text-xl font-extrabold text-sapin">
@@ -29,5 +31,7 @@ export default function Connexion() {
         </Suspense>
       </section>
     </main>
+    <Pied />
+    </>
   );
 }

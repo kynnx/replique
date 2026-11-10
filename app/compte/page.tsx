@@ -4,6 +4,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { connection } from "next/server";
 import { createClient } from "@/lib/supabase/server";
+import Pied from "@/components/pied";
 
 export const metadata: Metadata = {
   title: "Mon compte · Réplique",
@@ -83,6 +84,7 @@ export default function Compte({
   searchParams: Promise<{ paiement?: string }>;
 }) {
   return (
+    <>
     <main className="min-h-screen">
       <header className="mx-auto max-w-xl px-5 py-5">
         <Link href="/" className="font-titre text-xl font-extrabold text-sapin">
@@ -95,5 +97,7 @@ export default function Compte({
         </Suspense>
       </section>
     </main>
+    <Pied />
+    </>
   );
 }

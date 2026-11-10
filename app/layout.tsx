@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://replique-nine.vercel.app"),
   title: "Réplique : vos réponses aux questions qui reviennent",
   description:
-    "Une réponse prête en un clic pour chaque question qui revient dans votre boutique en ligne. Gratuit pour commencer.",
+    "Une réponse prête en un clic pour chaque question qui revient dans votre boutique en ligne. Sans engagement, satisfait ou remboursé pendant 30 jours.",
   openGraph: {
     title: "Réplique : vos réponses aux questions qui reviennent",
     description:
