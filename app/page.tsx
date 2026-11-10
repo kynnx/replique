@@ -32,6 +32,40 @@ export default function Home() {
             79 € par mois · sans engagement · satisfait ou remboursé pendant 30 jours
           </p>
         </section>
+               <section className="mx-auto max-w-3xl px-5 pb-12">
+          <p className="text-sm font-bold uppercase tracking-widest text-brique">
+            Un exemple concret
+          </p>
+          <div className="mt-4 rounded-md border border-encre/20 bg-white p-5">
+            <p className="text-sm font-bold uppercase tracking-widest text-encre/60">
+              Votre client écrit
+            </p>
+            <p className="mt-2 text-lg leading-snug">
+              « Bonjour, je n’ai toujours pas reçu ma commande. Où en est-elle ? »
+            </p>
+            <hr className="my-5 border-encre/20" />
+            <p className="text-sm font-bold uppercase tracking-widest text-sapin">
+              Réplique propose · Suivi de commande
+            </p>
+            <p className="mt-2 rounded-md bg-creme px-4 py-3 text-lg leading-snug">
+              Bonjour, merci de votre patience. Votre commande est en cours
+              d’acheminement : un e-mail de suivi vous a été envoyé avec son
+              numéro. Si rien n’est arrivé d’ici 3 jours, répondez à ce message
+              et nous la traitons en priorité. Bonne journée.
+            </p>
+            <div className="mt-4 flex gap-3" aria-hidden="true">
+              <span className="rounded-md border border-sapin px-5 py-3 font-bold text-sapin">
+                Modifier
+              </span>
+              <span className="rounded-md bg-sapin px-5 py-3 font-bold text-white">
+                Envoyer
+              </span>
+            </div>
+          </div>
+          <p className="mt-3 text-sm">
+            Exemple pour illustrer : le client et son message sont inventés.
+          </p>
+        </section>
 
         <section className="border-y border-encre/20 bg-white/40">
           <div className="mx-auto max-w-3xl px-5 py-12">
